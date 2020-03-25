@@ -41,7 +41,7 @@ gulp.task('pug', function () {
 }); */
 
 gulp.task('html', function () {
-	return gulp.src('src/**/*.html')
+	return gulp.src('src/*.html')
 		.pipe(plumber())
 		.pipe(rigger())
 		.pipe(gulp.dest('build/'))

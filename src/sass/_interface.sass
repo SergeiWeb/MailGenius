@@ -1,0 +1,35 @@
+$primary: #29375A
+$white: #ffffff
+$k: #ffffff
+
+*,*:before,*:after
+	box-sizing: border-box
+	border: 3px solid #000
+
+body
+	font: 400 14px/1 'PT Sans', sans-serif
+	overflow-x: hidden
+
+a
+	color: $white
+	display: inline-block
+	text-decoration: none
+	transition: all 0.3s ease-in-out
+	&:hover
+		color: $primary
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+.wrapper
+	width: 100%
+	min-height: 100vh
+	overflow: hidden
+
+.container
+	width: 100%
+	max-width: 1130px
+	padding: 0 15px
+	margin: 0 auto

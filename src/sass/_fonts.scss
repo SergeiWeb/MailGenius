@@ -1,0 +1,9 @@
+@mixin PTRegular {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 400;
+}
+
+@mixin PTBold {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+}
