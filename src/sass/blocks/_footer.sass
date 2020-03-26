@@ -1,0 +1,24 @@
+.footer
+	display: grid
+	grid-area: footer
+	&-content
+		display: grid
+		grid-template-rows: auto
+		grid-row-gap: 30px
+		&__subtitle
+			+PTBold
+			color: $green
+			line-height: 18px
+			letter-spacing: 0.03em
+			text-transform: uppercase
+		&__title
+			+PTBold
+			color: $primary
+			font-size: 36px
+			line-height: 47px
+			width: 490px
+	&-blocks
+		display: grid
+		grid-template-columns: repeat(6, 1fr)
+		grid-column-gap: 20px
+		align-items: center

@@ -1,14 +1,18 @@
 $primary: #29375A
 $white: #ffffff
-$k: #ffffff
+$green: #27DEBF
 
 *,*:before,*:after
 	box-sizing: border-box
-	border: 3px solid #000
 
 body
 	font: 400 14px/1 'PT Sans', sans-serif
 	overflow-x: hidden
+
+b
+	+PTBold
+	&.white
+		color: rgba($white, 1)
 
 a
 	color: $white
@@ -20,16 +24,35 @@ a
 
 img
 	display: block
-	max-width: 100%
+	width: 100%
 	height: auto
 
 .wrapper
 	width: 100%
 	min-height: 100vh
 	overflow: hidden
+	display: grid
+	grid-row-gap: 150px
+	grid-template-columns: 1fr
+	grid-template-areas: 'header' 'footer'
 
 .container
 	width: 100%
 	max-width: 1130px
 	padding: 0 15px
 	margin: 0 auto
+
+.button
+	+PTBold
+	color: $white
+	font-size: 18px
+	background: linear-gradient(90deg, #0CEBEB 0%, #20E3B2 50%, #29FFC6 100%)
+	box-shadow: 0px 4px 20px rgba(32, 228, 179, 0.85)
+	border-radius: 30px
+	padding: 16px 30px
+	outline: none
+	border: none
+	transition: all 0.25s linear
+	&:hover
+		cursor: pointer
+		box-shadow: 0px 4px 20px rgba(32, 228, 179, 0.5)

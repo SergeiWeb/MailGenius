@@ -1,11 +1,49 @@
 .header
+	display: grid
+	grid-area: header
 	background: url('../../images/header/header-bg.png') no-repeat
-	background-size: cover
+	background-size: 100% 100%
 
 .intro
-	padding: 150px 0 0
-	&__title
-		+PTBold
-		font-size: 48px
-		color: $white
-		width: 540px
+	padding: 90px 0 0
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	justify-content: space-between
+	align-items: center
+	&-info
+		display: grid
+		justify-items: start
+		grid-template-rows: auto
+		grid-row-gap: 20px
+		&__title
+			+PTBold
+			font-size: 48px
+			color: $white
+			line-height: 62px
+		&__text
+			+PTRegular
+			font-size: 18px
+			line-height: 24px
+			color: rgba($white, 0.8)
+			width: 380px
+	&-sign
+		display: grid
+		grid-template-rows: auto
+		align-items: center
+		justify-items: center
+		grid-row-gap: 15px
+		&__button
+			margin-top: 20px
+		&__link
+			+PTRegular
+			color: rgba($white, 0.8)
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				background: url('../../images/header/mark.svg') no-repeat center
+				background-size: contain
+				top: 0
+				left: -30px
+				width: 20px
+				height: 15px
